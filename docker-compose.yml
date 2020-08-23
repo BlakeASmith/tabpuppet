@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+        #coturn:
+        #image: instrumentisto/coturn
+        #network_mode: host
+
+        signalling:
+          image: blakeasmith/tabpuppet-signalling
+          ports:
+            - "80:80"
+    
+        tabpuppet:
+          image: blakeasmith/tabpuppet
+          ports:
+            - "6969:6969"
+          environment:
+            - PORT="6969"
+
