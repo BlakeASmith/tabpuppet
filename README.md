@@ -63,14 +63,21 @@ replicated at the connected clients.
 The signalling server generates a token/key which others can use to join the session. The token is
 only used to establish the peer-to-peer connection between your browser and the clients.
 
+### Joining a Room
 
+To join an existing room as a client click the `Join Room` button in the 
+popup and paste in the token/key provided by the host of the room. 
 
+![](docs/images/join_room.png)
 
+---
 
-enter_key.png
-hosting_room.png
-join_room.png
-load_manifest.jpg
+![](docs/images/enter_key.png)
+
+---
+
+After hitting the `Join` button, a new tab will open in which any clicks made at the Host 
+will be mirrored. 
 
 
 
