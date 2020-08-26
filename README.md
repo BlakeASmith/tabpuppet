@@ -40,6 +40,8 @@ Click `load temporary add-on` and navigate to the ![manifest.json](firefox/manif
 
 ![](docs/images/load_temp_addon.jpg)
 
+-----
+
 ![](docs/images/load_manifest.jpg)
 
 
