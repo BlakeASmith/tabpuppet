@@ -38,9 +38,9 @@ Next, click the "this firefox" button
 
 Click `load temporary add-on` and navigate to the ![manifest.json](firefox/manifest.json) file for the extension
 
-![](docs/images/load_temp_addon)
+![](docs/images/load_temp_addon.jpg)
 
-![](docs/images/load_temp_addon)
+![](docs/images/load_manifest.jpg)
 
 
 create_room.png
