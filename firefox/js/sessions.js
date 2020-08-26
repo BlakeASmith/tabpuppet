@@ -29,6 +29,11 @@ class Room {
 
 	this.log = []
 	this.onMessageListeners = []
+	this.onConnectListeners = []
+    }
+
+    onPeerConnect(action){
+	this.onConnectListeners.push(action)
     }
 
     send(message){
@@ -53,6 +58,12 @@ class Room {
 		action(this.decode(data))
 	    }
 	    this.log.push(data)
+	})
+
+	peer.on('connect', () => {
+	    for(let action of this.onConnectListeners){
+		action(peer)
+	    }
 	})
 	
 	return peer
