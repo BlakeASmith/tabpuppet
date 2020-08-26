@@ -11,7 +11,7 @@ services:
             - "80:80"
     
         tabpuppet:
-          image: blakeasmith/tabpuppet
+          image: blakeasmith/tabpuppet-express
           ports:
             - "6969:6969"
           environment:

@@ -1,4 +1,12 @@
-alert("mirrow")
+browser.runtime.onMessage.addListener(m => {
+    if (m.type == "xpath")
+	clickXpath(m.xpath)
+    else if (m.type == "url")
+	goToUrl(m.url)
+
+})
+console.log("registerd message listener")
+
 
 function clickXpath(xpath){
 	console.log("clicking " + xpath)
@@ -16,12 +24,4 @@ function goToUrl(url) {
     console.log(url)
 }
 
-
-browser.runtime.onMessage.addListener(m => {
-    if (m.type == "xpath")
-	clickXpath(m.xpath)
-    else if (m.type == "url")
-	goToUrl(m.url)
-
-})
 
