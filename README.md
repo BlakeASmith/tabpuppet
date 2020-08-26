@@ -17,6 +17,8 @@ the XPATH of any elements clicked at the "host" machine to any number of connect
 - [ ] Handle errors regarding host and clients becoming out of sync
 - [ ] Add configuration of the start URL to the popup instead of using the current active tab's URL
 - [ ] Allow multiple active sessions to be hosted from a single browser
+- [ ] Allow clients to connect mid-session and load up with the same state as the host tab
+- [ ] Notify peers when the host exits the room
 
 ## Installing
 
@@ -44,8 +46,27 @@ Click `load temporary add-on` and navigate to the ![manifest.json](firefox/manif
 
 ![](docs/images/load_manifest.jpg)
 
+## Usage
 
-create_room.png
+### Sharing Your Tab / Hosting
+
+Navigate to a website that you would like to start sharing from. Create a room by
+clicking the `Create Room` button in the popup.
+
+![](docs/images/create_room.png)
+
+This will open the current website in a new tab, any clicks within the new tab will be 
+replicated at the connected clients. 
+
+![](docs/images/hosting_room.png)
+
+The signalling server generates a token/key which others can use to join the session. The token is
+only used to establish the peer-to-peer connection between your browser and the clients.
+
+
+
+
+
 enter_key.png
 hosting_room.png
 join_room.png
