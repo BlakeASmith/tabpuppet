@@ -5,7 +5,7 @@ from uuid import uuid1 as uuid
 from dataclasses import dataclass, field
 from typing import Optional, Mapping
 
-port = 8989
+port = 8080
 
 def token_gen():
     while True:
@@ -56,7 +56,7 @@ async def connect(websocket, path):
         await sessions[token].join(websocket)
 
 
-start_server = websockets.serve(connect, "localhost", port)
+start_server = websockets.serve(connect, "0.0.0.0", port)
 
 print(f"starting server on {port}")
 asyncio.get_event_loop().run_until_complete(start_server)

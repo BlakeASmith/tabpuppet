@@ -1,5 +1,5 @@
-const HOST = "localhost"
-const PORT = 8989
+const HOST = "35.217.67.205"
+const PORT = 8080
 const share_url = "http://www.blakesmith.ca/"
 
 var room
